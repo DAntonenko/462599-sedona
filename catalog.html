@@ -23,28 +23,30 @@
   	<main>
   		<h1 class="visualy-hidden">Каталог гостиниц Седоны</h1>
 
-      <section class="filter">
-        <div class="filter-infrastructure">
-          <p>Инфраструктура:</p>
-          <ul>
-            <li><label><input type="checkbox" checked></label>бассейн</li>
-            <li><label><input type="checkbox"></label>парковка</li>
-            <li><label><input type="checkbox"></label>wi-fi</li>
-          </ul>
-        </div>
-        <div class="filter-type">
-          <p>Тип жилья:</p>
-          <ul>
-            <li><label><input type="checkbox" checked>гостиница</label></li>
-            <li><label><input type="checkbox" checked>мотель</label></li>
-            <li><label><input type="checkbox" checked>апартаменты</label></li>
-          </ul>
-        </div>
-        <div class="filter-price">
-          <p>Стоимость в сутки (р):</p>
-          <!--Slider-->
-          <a href="#">Показать</a>
-        </div>
+      <section class="filter-container">
+        <form class="filter">
+          <div class="filter-infrastructure">
+            <h3>Инфраструктура:</h3>
+            <ul>
+              <li><label><input type="checkbox" name="swimmingpool" checked>бассейн</label></li>
+              <li><label><input type="checkbox" name="parking">парковка</label></li>
+              <li><label><input type="checkbox" name="wi-fi">wi-fi</label></li>
+            </ul>
+          </div>
+          <div class="filter-type">
+            <h3>Тип жилья:</h3>
+            <ul>
+              <li><label><input type="checkbox" checked>гостиница</label></li>
+              <li><label><input type="checkbox" checked>мотель</label></li>
+              <li><label><input type="checkbox" checked>апартаменты</label></li>
+            </ul>
+          </div>
+          <div class="filter-price">
+            <h3>Стоимость в сутки (р):</h3>
+            <!--Slider-->
+            <button type="submit">Показать</button>
+          </div>
+        </form>
       </section>
       
       <section class="results-sort">
@@ -56,7 +58,7 @@
           <li><a href="#">по типу</a></li>
           <li><a href="#">по рейтингу</a></li>
         </ul>
-        <ul class="arrows">
+        <ul class="sort-tuning-arrows">
           <li><button class="button-arrow button-arrow-up">Вверх</button></li>
           <li><button class="button-arrow button-arrow-down">Вниз</button></li>
         </ul>
