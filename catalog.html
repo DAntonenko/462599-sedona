@@ -15,16 +15,16 @@
     			<li><a>Гостиницы</a></li>
     		</ul>
     		<a class="main-header-logo" href="index.html">
-    			<img src="img/header-logo.svg" alt="Логотип City of Sedona">
+    			<img src="img/header-logo.png" width="138" height="70" alt="Логотип City of Sedona">
     		</a>
     	</nav>
   	</header>
 
   	<main>
-  		<h1 class="visualy-hidden">Каталог гостиниц Седоны</h1>
+  		<h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
 
       <section class="filter-container">
-        <form class="filter">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="post" oninput="price_min_output.value=price_min.value" oninput="price_max_output.value=price_max.value">
           <div class="filter-infrastructure">
             <h3>Инфраструктура:</h3>
             <ul>
@@ -36,21 +36,28 @@
           <div class="filter-type">
             <h3>Тип жилья:</h3>
             <ul>
-              <li><label><input type="checkbox" checked>гостиница</label></li>
-              <li><label><input type="checkbox" checked>мотель</label></li>
-              <li><label><input type="checkbox" checked>апартаменты</label></li>
+              <li><label><input type="checkbox" name="hotel" checked>гостиница</label></li>
+              <li><label><input type="checkbox" name="motel" checked>мотель</label></li>
+              <li><label><input type="checkbox" name="apartment" checked>апартаменты</label></li>
             </ul>
           </div>
           <div class="filter-price">
             <h3>Стоимость в сутки (р):</h3>
-            <!--Slider-->
+            <div class="filter-output">
+              <span>от</span>
+              <output name="price_min_output">0</output>
+              <span>до</span>
+              <output name="price_max_output">3000</output>
+            </div>
+            <input type="range" name="price_min" min="0" max="4000" step="1" value="0">
+            <input type="range" name="price_max" min="0" max="4000" step="1" value="3000">
             <button type="submit">Показать</button>
           </div>
         </form>
       </section>
       
       <section class="results-sort">
-        <h2 class="visualy-hidden">Результаты поиска</h2>
+        <h2 class="visually-hidden">Результаты поиска</h2>
         <p class="results-counter">Найдено: 3</p>
         <h3>Сортировка:</h3>
         <ul class="sort-type">
@@ -67,7 +74,7 @@
       <section class="hotel-list">
         <section class="hotel-card">
           <div class="hotel-photo">
-            <img src="img/amara_resort.jpg" alt="Фото гостиницы «Amara Resort & Spa»">
+            <img src="img/amara_resort.jpg" width="135" height="90" alt="Фото гостиницы «Amara Resort & Spa»">
           </div>
           <div class="hotel-info">
             <h2>Amara Resort & Spa</h2>
@@ -88,7 +95,7 @@
 
         <section class="hotel-card">
           <div class="hotel-photo">
-            <img src="img/desert_qual_inn.jpg" alt="Фото мотеля «Desert Quail Inn»">
+            <img src="img/desert_qual_inn.jpg" width="135" height="90" alt="Фото мотеля «Desert Quail Inn»">
           </div>
           <div class="hotel-info">
             <h2>Desert Quail Inn</h2>
@@ -109,7 +116,7 @@
 
         <section class="hotel-card">
           <div class="hotel-photo">
-            <img src="img/villas_at_poco_diablo.jpg" alt="Фото апартаментов «Villas at Poco Diablo»">
+            <img src="img/villas_at_poco_diablo.jpg" width="135" height="90" alt="Фото апартаментов «Villas at Poco Diablo»">
           </div>
           <div class="hotel-info">
             <h2>Villas at Poco Diablo</h2>
