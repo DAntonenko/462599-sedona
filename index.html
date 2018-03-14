@@ -96,10 +96,14 @@
 	  			<button class="hotel-search" type="button">Поиск гостиницы в Седоне</button>
 	  			<div class="modal">
 	  				<form action="https://echo.htmlacademy.ru" method="post">
-	  					<label>Дата заезда:<input type="text" name="arrival-date" value="24 апреля 2017"></label>
-	  					<label>Дата выезда:<input type="text" name="departure-date" value="4 июля 2017"></label>
-	  					<label>Взрослые:<input type="number" name="adults-quantity" min="1" value="2"></label>
-	  					<label>Дети:<input type="number" name="children-quantity" min="0" value="0"></label>
+	  					<div class="form-control-calendar">
+	  						<label>Дата заезда:<input type="text" name="arrival-date" value="24 апреля 2017"><button type="button">Показать календарь</button></label>
+	  						<label>Дата выезда:<input type="text" name="departure-date" value="4 июля 2017"><button type="button">Показать календарь</button></label>
+	  					</div>
+	  					<div class="form-control-quantity">
+	  						<label>Взрослые:<button class="form-control-plus" type="button">Увеличить</button><input type="text" name="adults-quantity" min="1" value="2"><button class="form-control-minus" type="button">Уменьшить</button></label>
+	  						<label>Дети:<button class="form-control-plus" type="button">Увеличить</button><input type="text" name="children-quantity" min="0" value="0"><button class="form-control-minus" type="button">Уменьшить</button></label>
+	  					</div>
 	  					<button type="submit">Найти</button>
 	  				</form>
 	  			</div>

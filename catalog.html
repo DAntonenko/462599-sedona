@@ -43,14 +43,11 @@
           </div>
           <div class="filter-price">
             <h3>Стоимость в сутки (р):</h3>
-            <div class="filter-output">
-              <span>от</span>
-              <output name="price_min_output">0</output>
-              <span>до</span>
-              <output name="price_max_output">3000</output>
-            </div>
-            <input type="range" name="price_min" min="0" max="4000" step="1" value="0">
-            <input type="range" name="price_max" min="0" max="4000" step="1" value="3000">
+            <label>от<input type="text" name="price-min" value="0"></label>
+            <label>до<input type="text" name="price-max" value="3000"></label>
+            <span class="filter-price-slider">
+              <!--Линию нарисовать как svg с градиентом, на неё повесить два ползунка как псевдоэлементы ::before и ::after-->
+            </span>
             <button type="submit">Показать</button>
           </div>
         </form>
