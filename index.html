@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -21,7 +24,7 @@
 	    	</nav>
 	  	</header>
 
-	  	<main>
+	  	<main class="index">
 	  		<div class="background-container">
 	  			<img src="img/welcome_to_sedona.png" width="458" height="352" alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
 	  			<div class="background-mask"></div>
@@ -35,7 +38,7 @@
 	  				<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 	  			</header>
 						
-	  			<section class="feature pictorial-feture">
+	  			<section class="feature pictorial-feature">
 	  				<div class="feature-column">
 	  					<h2>Настоящий городок</h2>
 	  					<p>— №1 —</p>
@@ -62,7 +65,7 @@
 	  				</div>
 	  			</section>
 
-	  			<section class="feature pictorial-feture">
+	  			<section class="feature pictorial-feature">
 	  				<div class="picture picture-rocs"></div>
 	  				<div class="feature-column">
 	  					<h2>Там есть Мост Дьявола</h2>
@@ -101,10 +104,10 @@
 	  						<label>Дата выезда:<input type="text" name="departure-date" value="4 июля 2017"><button type="button">Показать календарь</button></label>
 	  					</div>
 	  					<div class="form-control-quantity">
-	  						<label>Взрослые:<button class="form-control-plus" type="button">Увеличить</button><input type="text" name="adults-quantity" min="1" value="2"><button class="form-control-minus" type="button">Уменьшить</button></label>
-	  						<label>Дети:<button class="form-control-plus" type="button">Увеличить</button><input type="text" name="children-quantity" min="0" value="0"><button class="form-control-minus" type="button">Уменьшить</button></label>
+	  						<label>Взрослые:<button class="form-control-minus" type="button">Увеличить</button><input type="text" name="adults-quantity" min="1" value="2"><button class="form-control-plus" type="button">Уменьшить</button></label>
+	  						<label>Дети:<button class="form-control-minus" type="button">Увеличить</button><input type="text" name="children-quantity" min="0" value="0"><button class="form-control-plus" type="button">Уменьшить</button></label>
 	  					</div>
-	  					<button type="submit">Найти</button>
+	  					<button class="to-search" type="submit">Найти</button>
 	  				</form>
 	  			</div>
 	  		</section>
@@ -126,7 +129,7 @@
 
 	    	<p class="footer-copyright">
 					Website by
-					<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy-logo.png" alt="HTML Academy"></a>
+					<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" alt="HTML Academy"></a>
 				</p>
 	    </footer>
     </div>

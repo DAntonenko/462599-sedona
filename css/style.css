@@ -1,0 +1,318 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	color: #000000;
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 21px;
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-navigation,
+.footer-social,
+.filter-infrastructure-list,
+.filter-type-list,
+.sort-type,
+.sort-tuning-arrows {
+	list-style: none;
+}
+
+.index p {
+	color: #333333;
+	text-align: center;
+}
+
+.index h2 {
+	text-align: center;
+}
+
+.main-navigation a,
+.main-footer a {
+	color: #000000;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.main-navigation a:hover,
+.hotel-info h2:hover,
+.main-navigation a:focus,
+.hotel-info h2:focus {
+	color: #81b3d2;
+}
+
+.main-navigation a:active,
+.hotel-info h2:active {
+	opacity: 0.3;
+}
+
+.current-page {
+	font-weight: 700;
+	line-height: 26px;
+	color: #766357;
+}
+
+.background-container {
+	width: 1200px;
+	height: 501px;
+	background-color: #e0edf7;
+	background-image: url("../img/background_mountains.jpg");
+}
+
+.background-container img {
+	display: block;
+	margin: auto;
+}
+
+.background-mask {
+	background-color: transparent;
+	background-image: url("../img/background-mask.png");
+}
+
+.article-header h2,
+.feature h2,
+.hotel-list h2 {
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.pictorial-feature p {
+	color: #ffffff;
+}
+
+.pictorial-feature {
+	background-color: #81b3d2;
+	color: #ffffff;
+}
+
+.picture {
+	background-color: #81b3d2;
+}
+
+.picture-buildings {
+	width: 800px;
+	height: 401px;
+	background-image: url("../img/buildings.jpg");
+}
+
+.picture-rocs {
+	width: 800px;
+	height: 400px;
+	background-image: url("../img/rocs.jpg");
+}
+
+.icon-house {
+	width: 75px;
+	height: 72px;
+	background-image: url("../img/icon-house.svg");
+}
+
+.icon-burger {
+	width: 74px;
+	height: 70px;
+	background-image: url("../img/icon-burger.svg");
+}
+
+.icon-box {
+	width: 64px;
+	height: 76px;
+	background-image: url("../img/icon-box.svg");
+}
+
+.features-grid-lower {
+	background-color: #ebebeb;
+}
+
+.interested h2 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 36px;
+}
+
+.interested button,
+.filter-container button {
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.hotel-search,
+.to-search {
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 26px;
+	border: none;
+}
+
+.hotel-search {
+	background-color: #766357;
+	width: 568px;
+	height: 86px;
+}
+
+.hotel-search:hover,
+.hotel-search:focus {
+	background-color: #604e43;
+}
+
+.hotel-search:active {
+	background-color: #503e33;
+	color: #847770;
+}
+
+/* Кнопка "Найти"; те же интерактивные стили и для социальных кнопок */
+
+.modal .to-search {
+	background-color: #81b3d2;
+	color: #ffffff;
+	width: 458px;
+	height: 58px;
+}
+
+.modal .to-search:hover,
+.modal .to-search:focus {
+	background-color: #669ec0;
+}
+
+.modal .to-search:active {
+	background-color: #5496bd;
+	color: #87b5d1;
+}
+
+/* Форма ввода данных модального окна */
+
+.modal {
+	font-weight: 700;
+	line-height: 26px;
+}
+
+.form-control-calendar input,
+.form-control-quantity input {
+	background-color: #f2f2f2;
+	border: none;
+	font: inherit;
+	text-transform: inherit;
+}
+
+.form-control-calendar input:hover,
+.form-control-quantity input:hover {
+	background-color: #ebebeb;
+}
+
+.form-control-calendar input:focus,
+.form-control-quantity input:focus {
+	background-color: #ffffff;
+	outline: 2px solid #e5e5e5;
+	outline-offset: -2px;
+}
+
+.form-control-calendar input {
+	width: 346px;
+	height: 38px;
+	padding-left: 13px;
+}
+
+.form-control-quantity input {
+	width: 38px;
+	height: 38px;
+	text-align: center;
+}
+
+/* Кнопки формы модального окна */
+
+.modal button {
+	width: 38px;
+	height: 38px;
+	color: transparent;
+	background-color: #f2f2f2;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+}
+
+.form-control-calendar button {
+	background-image: url("../img/calendar.svg");
+}
+
+.form-control-minus {
+	
+}
+
+.form-control-plus {
+
+}
+
+/* Правила для страницы каталога гостиниц */
+
+.filter-container {
+	width: 1200px;
+	height: 562px;
+	background-color: #5496bd;
+	background-image: url("../img/background_mountains_blured.jpg");
+	color: #ffffff;
+}
+
+.filter-container h3 {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 21px;
+}
+
+/* Футер */
+
+.main-footer {
+	width: 1200px;
+	height: 120px;
+	opacity: 0.9;
+}
+
+.footer-social a {
+	display: block;
+	width: 46px;
+	height: 48px;
+	color: transparent;
+	background-color: #81b3d2;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+	background-color: #669ec0;
+}
+
+.footer-social a:active {
+	background-color: #5496bd;
+}
+
+.social-button-twitter {
+	background-image: url("../img/twitter-icon.svg");
+}
+
+.social-button-fecebook {
+	background-image: url("../img/fb-icon.svg");
+}
+
+.social-button-youtube {
+	background-image: url("../img/youtube-icon.svg");
+}
+
+.footer-copyright img {
+	width: 115px;
+	height: 41px;
+}

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -12,7 +15,7 @@
     			<li><a href="info.html">Информация</a></li>
     			<li><a href="photo_video.html">Фото и видео</a></li>
     			<li><a href="map.html">Карта штата</a></li>
-    			<li><a>Гостиницы</a></li>
+    			<li class="current-page">Гостиницы</li>
     		</ul>
     		<a class="main-header-logo" href="index.html">
     			<img src="img/header-logo.png" width="138" height="70" alt="Логотип City of Sedona">
@@ -20,14 +23,14 @@
     	</nav>
   	</header>
 
-  	<main>
+  	<main class="catalog">
   		<h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
 
       <section class="filter-container">
         <form class="filter" action="https://echo.htmlacademy.ru" method="post" oninput="price_min_output.value=price_min.value" oninput="price_max_output.value=price_max.value">
           <div class="filter-infrastructure">
             <h3>Инфраструктура:</h3>
-            <ul>
+            <ul class="filter-infrastructure-list">
               <li><label><input type="checkbox" name="swimmingpool" checked>бассейн</label></li>
               <li><label><input type="checkbox" name="parking">парковка</label></li>
               <li><label><input type="checkbox" name="wi-fi">wi-fi</label></li>
@@ -35,7 +38,7 @@
           </div>
           <div class="filter-type">
             <h3>Тип жилья:</h3>
-            <ul>
+            <ul class="filter-type-list">
               <li><label><input type="checkbox" name="hotel" checked>гостиница</label></li>
               <li><label><input type="checkbox" name="motel" checked>мотель</label></li>
               <li><label><input type="checkbox" name="apartment" checked>апартаменты</label></li>
