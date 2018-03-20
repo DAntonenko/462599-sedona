@@ -39,6 +39,8 @@ body {
 .sort-type,
 .sort-tuning-arrows {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* Приклеивает хедер к верху окна, а футер к низу, убирая выпадающие маргины */
@@ -91,6 +93,7 @@ body {
 	background-size: cover;
 	padding-top: 80px;
 	padding-bottom: 80px;
+	position: relative;
 }
 
 .background-container img {
@@ -101,7 +104,10 @@ body {
 .background-mask {
 	background-color: transparent;
 	background-image: url("../img/background-mask.png");
+	width: 1200px;
 	height: 57px;
+	position: absolute;
+	bottom: 0;
 }
 
 .article-header h2,
@@ -261,7 +267,6 @@ body {
 .modal button {
 	width: 38px;
 	height: 38px;
-	font-size: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
@@ -347,7 +352,8 @@ body {
 /* Блок ввода цены и слайдера */
 
 .filter-price-input {
-	width: 220px;
+	position: relative;
+	width: 140px;
 	border: 2px solid #ffffff;
 	border-radius: 3px;
 	padding: 11px 28px 11px 41px;
@@ -357,15 +363,61 @@ body {
 	background-color: transparent;
 	border: none;
 	color: inherit;
-	width: 50px;
+	margin: 0;
+	width: 30px;
 }
 
-.filter-price-input input:first-child::after {
+.filter-price-input label:first-child {
+	margin-left: -5px;
+}
+
+.filter-price-input label:nth-child(2) {
+	margin-left: 30px;
+}
+
+.filter-price-input label:first-child::after {
 	content: "";
 	display: block;
+	position: absolute;
+	top: 10px;
+	left: 100px;
 	width: 2px;
 	height: 22px;
 	background-color: #ffffff;
+}
+
+.filter-price-slider {
+	width: 210px;
+  height: 2px;
+  background: linear-gradient(to right, #ffffff 70%, rgba(255, 255, 255, .3) 30%);
+  position: relative;
+}
+
+.slider-control {
+	width: 4px;
+  height: 4px;
+  background: #a6a6a6;
+  display: block;
+  border-width: 8px;
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px 0 rgba(255, 255, 255, .3);
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.slider-control:hover {
+	border-width: 9px;
+}
+
+.slider-control-left {
+	left: 0;
+}
+
+.slider-control-right {
+	left: 70%;
 }
 
 .filter-price button {
@@ -422,7 +474,6 @@ body {
 .button-arrow {
 	display: block;
 	padding: 0;
-	font-size: 0;
 	width: 11px;
 	height: 10px;
 	background-color: transparent;
@@ -518,7 +569,6 @@ body {
 	display: block;
 	width: 46px;
 	height: 48px;
-	color: transparent;
 	background-color: #81b3d2;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -542,7 +592,7 @@ body {
 }
 
 .social-button-fecebook:active {
-	ackground-color: #5496bd;
+	background-color: #5496bd;
 	background-image: url("../img/fb-icon_dark.svg");
 }
 
@@ -558,7 +608,6 @@ body {
 	display: inline-block;
 	width: 115px;
 	height: 41px;
-	font-size: 0;
 	background-image: url("../img/logo_htmlacademy_black.png");
 }
 
