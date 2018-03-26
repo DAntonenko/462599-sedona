@@ -1,3 +1,37 @@
+/* Служебные */
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); / IE6, IE7 /
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1; 
+	overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Принудительное наследование box-sizing: border-box для flex-элементов */
+
+*, *!::before, *!::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+.content-box-component {
+	box-sizing: content-box;
+}
+
+/*******************************/
+
 body {
 	margin: 0;
   padding: 0;
@@ -11,6 +45,7 @@ body {
 }
 
 .container {
+	position: relative;
 	width: 1200px;
   margin: 0 auto;
   background: white;
@@ -21,34 +56,17 @@ body {
 	text-decoration: none;
 }
 
-.visually-hidden {
-	position: absolute;
-	clip: rect(1px 1px 1px 1px); / IE6, IE7 /
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0;
-	border:0;
-	height: 1px; 
-	width: 1; 
-	overflow: hidden;
-}
+/* Приклеивает хедер к верху окна, а футер к низу, убирая выпадающие маргины; заодно сбрасывает стили списков */
 
 .main-navigation,
+.footer-visitsedona,
 .footer-social,
+.footer-copyright,
 .filter-infrastructure-list,
 .filter-type-list,
 .sort-type,
 .sort-tuning-arrows {
 	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-/* Приклеивает хедер к верху окна, а футер к низу, убирая выпадающие маргины */
-
-.main-navigation,
-.footer-visitsedona,
-.footer-social,
-.footer-copyright {
 	margin: 0;
 	padding: 0;
 }
@@ -210,6 +228,8 @@ body {
 	background-color: #81b3d2;
 	font-size: 21px;
 	color: #ffffff;
+	text-transform: inherit;
+	padding-bottom: 4px;
 	width: 458px;
 	height: 58px;
 }
@@ -266,7 +286,7 @@ body {
 
 .modal button {
 	width: 38px;
-	height: 38px;
+	height: 40px;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
@@ -313,6 +333,7 @@ body {
 .filter-container {
 	background-color: #5496bd;
 	background-image: url("../img/background_mountains_blured.jpg");
+	background-position: center;
 	color: #ffffff;
 }
 
@@ -353,10 +374,12 @@ body {
 
 .filter-price-input {
 	position: relative;
-	width: 140px;
+	width: 199px;
+	height: 10px;
 	border: 2px solid #ffffff;
 	border-radius: 3px;
-	padding: 11px 28px 11px 41px;
+	padding: 11px 50px 11px 65px;
+	margin-bottom: 22px;
 }
 
 .filter-price-input input {
@@ -387,10 +410,11 @@ body {
 }
 
 .filter-price-slider {
-	width: 210px;
+	width: 317px;
   height: 2px;
   background: linear-gradient(to right, #ffffff 70%, rgba(255, 255, 255, .3) 30%);
   position: relative;
+  margin-bottom: 34px;
 }
 
 .slider-control {
@@ -435,6 +459,7 @@ body {
 /* Блок сортровки результатов */
 
 .results-sort {
+	min-height: 86px;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 18px;
@@ -562,7 +587,12 @@ body {
 
 .main-footer {
 	width: 1200px;
+	background-color: white;
 	opacity: 0.9;
+}
+
+.footer-visitsedona {
+	font-size: 21px;
 }
 
 .footer-social a {
@@ -617,4 +647,268 @@ body {
 
 .footer-copyright a:active {
 	background-image: url("../img/logo_htmlacademy_grey.png");
+}
+
+/* Стили для сеток */
+
+/* Хедер */
+
+.main-navigation {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main-navigation li {
+	min-height: 56px;
+	width: 239px;
+	border: 1px dashed black;
+}
+
+.main-navigation li a {
+	border: 1px dashed red;
+}
+
+.header-navigation {
+	position: relative;
+}
+
+.main-header-logo {
+	position: absolute;
+	left: 500px;
+	top: 0;
+	z-index: 10;
+}
+
+/* index main */
+
+.article-header {
+	padding-top: 61px;
+	padding-bottom: 56px;
+}
+
+.article-header h2 {
+	width: 440px;
+	margin: auto;
+	margin-bottom: 38px;
+}
+
+.index-main-flexbox {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.index-main-flexbox section {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.feature-column {
+	width: 400px;
+	min-height: 256px;
+	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
+}
+
+.pictorial-feature .feature-column:first-of-type {
+	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
+}
+
+.pictorial-feature .feature-column:last-of-type {
+	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
+}
+
+.feature-column h2,
+.feature-column p {
+	margin-top: 50px;
+}
+
+.picture {
+	height: inherit;
+	background-position: center;
+}
+
+.interested {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 291px;
+	padding-top: 57px;
+}
+
+/* Модальное окно */
+
+.modal {
+	width: 458px;
+	padding: 55px;
+	background-color: white;
+	position: absolute;
+	left: 316px;
+}
+
+.form-control-calendar label input[name="arrival-date"] {
+	margin-left: 21px;
+}
+
+.form-control-calendar label input[name="departure-date"] {
+	margin-left: 18px;
+}
+
+.form-control-calendar label {
+	display: block;
+	position: relative;
+}
+
+.form-control-calendar label input {
+	width: 334px;
+	margin-bottom: 30px;
+}
+
+.form-control-calendar button {
+	position: absolute;
+	left: 419px;
+	background-color: transparent;
+}
+
+.form-control-minus,
+.form-control-plus {
+	position: relative;
+	top: -6px;
+}
+
+.form-control-quantity label:first-child {
+	margin-right: 34px;
+}
+
+.form-control-quantity label:nth-of-type(2) {
+	margin-left: 52px;
+	margin-right: 19px;
+}
+
+.to-search {
+	margin-top: 54px;
+}
+
+/* catalog */
+
+.filter-container {
+	padding-top: 31px;
+	padding-bottom: 23px;
+}
+
+.filter {
+	display: flex;
+	justify-content: space-around;
+}
+
+.filter-infrastructure {
+	margin-left: 72px;
+}
+
+.filter-type {
+	margin-left: 115px;
+}
+
+.filter-infrastructure h3,
+.filter-type h3 {
+	margin-bottom: 28px;
+}
+
+.filter-infrastructure-list li,
+.filter-type-list li {
+	margin-top: 23px;
+}
+
+.filter-price {
+	margin-right: 74px;
+	margin-left: auto;
+}
+
+.results-sort,
+.sort-type,
+.sort-tuning-arrows {
+	display: flex;
+	align-items: center;
+}
+
+.results-sort,
+.hotel-list {
+	padding: 0 72px;
+	background-color: #fefefe;
+}
+
+.results-counter {
+	margin-right: 49px;
+}
+
+.results-sort h3 {
+	margin-right: 40px;
+}
+
+.sort-type a {
+	margin-right: 33px;
+}
+
+.sort-tuning-arrows {
+	margin-left: auto;
+}
+
+.button-arrow {
+	margin-left: 12px;
+}
+
+.hotel-card {
+	height: 96px;
+	display: flex;
+	padding: 30px 0;
+}
+
+.hotel-info {
+	margin-left: 30px;
+}
+
+.more-detailed {
+	margin-right: 6px;
+}
+
+.hotel-rating {
+	margin-left: auto;
+}
+
+.hotel-stars {
+	float: right;
+}
+
+.hotel-info h2 {
+	margin: 0;
+	padding: 0;
+}
+
+/* Футер */
+
+.main-footer,
+.footer-social {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.main-footer {
+	min-height: 120px;
+}
+
+.footer-social {
+	width: 156px;
+}
+
+.footer-copyright {
+	
+}
+
+.index-footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.catalog-footer {
+	background-color: #fefefe;
 }
