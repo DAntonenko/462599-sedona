@@ -7,7 +7,7 @@
 	padding:0;
 	border:0;
 	height: 1px; 
-	width: 1; 
+	width: 1px; 
 	overflow: hidden;
 }
 
@@ -19,13 +19,14 @@
 
 /* Принудительное наследование box-sizing: border-box для flex-элементов */
 
-*, *!::before, *!::after {
-	box-sizing: inherit;
-}
-
 html {
 	box-sizing: border-box;
 }
+
+* {
+	box-sizing: inherit;
+}
+
 .content-box-component {
 	box-sizing: content-box;
 }
@@ -222,7 +223,7 @@ body {
 	color: #847770;
 }
 
-/* Кнопка "Найти" */
+/* Форма ввода данных модального окна */
 
 .modal .to-search {
 	background-color: #81b3d2;
@@ -242,8 +243,6 @@ body {
 	background-color: #5496bd;
 	color: #87b5d1;
 }
-
-/* Форма ввода данных модального окна */
 
 .modal {
 	font-weight: 700;
@@ -271,7 +270,7 @@ body {
 }
 
 .form-control-calendar input {
-	width: 346px;
+	width: 348px;
 	height: 38px;
 	padding-left: 13px;
 }
@@ -286,7 +285,8 @@ body {
 
 .modal button {
 	width: 38px;
-	height: 40px;
+	height: 38px;
+	background-color: #f2f2f2;
 	background-repeat: no-repeat;
 	background-position: center;
 	border: none;
@@ -374,11 +374,11 @@ body {
 
 .filter-price-input {
 	position: relative;
-	width: 199px;
-	height: 10px;
+	display: block;
+	width: 314px;
+	height: 32px;
 	border: 2px solid #ffffff;
 	border-radius: 3px;
-	padding: 11px 50px 11px 65px;
 	margin-bottom: 22px;
 }
 
@@ -390,20 +390,22 @@ body {
 	width: 30px;
 }
 
-.filter-price-input label:first-child {
-	margin-left: -5px;
+.filter-price-input label {
+	display: inline-block;
+	margin-top: 5px;
 }
 
-.filter-price-input label:nth-child(2) {
-	margin-left: 30px;
+.filter-price-input label:first-child {
+	margin-left: 65px;
+	margin-right: 90px;
 }
 
 .filter-price-input label:first-child::after {
 	content: "";
 	display: block;
 	position: absolute;
-	top: 10px;
-	left: 100px;
+	top: 3px;
+	left: 157px;
 	width: 2px;
 	height: 22px;
 	background-color: #ffffff;
@@ -418,8 +420,8 @@ body {
 }
 
 .slider-control {
-	width: 4px;
-  height: 4px;
+	width: 20px;
+  height: 20px;
   background: #a6a6a6;
   display: block;
   border-width: 8px;
@@ -433,6 +435,8 @@ body {
 }
 
 .slider-control:hover {
+	width: 22px;
+  height: 22px;
 	border-width: 9px;
 }
 
@@ -445,10 +449,11 @@ body {
 }
 
 .filter-price button {
+	width: 133px;
+  height: 32px;
 	border: 2px solid #ffffff;
 	border-radius: 3px;
 	background-color: transparent;
-	padding: 11px 33px 11px 35px;
 }
 
 .filter-price button:hover {
@@ -535,13 +540,17 @@ body {
 
 .more-detailed,
 .to-book {
+	display: inline-block;
+	height: 27px;
 	color: #ffffff;
 	font-weight: 700;
 }
 
 .more-detailed {
+	width: 110px;
 	background-color: #77aecd;
-	padding: 8px 17px 7px 17px;
+	text-align: center;
+	padding-top: 4px;
 }
 
 .more-detailed:hover {
@@ -554,8 +563,10 @@ body {
 }
 
 .to-book {
+	width: 142px;
 	background-color: #766357;
-	padding: 8px 16px;
+	text-align: center;
+	padding-top: 4px;
 }
 
 .to-book:hover {
@@ -577,10 +588,11 @@ body {
 }
 
 .hotel-rating-value {
-	width: 85px;
 	color: #666666;
 	background-color: #f2f2f2;
 	padding: 5px 13px 6px 16px;
+	margin-top: auto;
+	margin-bottom: 0;
 }
 
 /* Футер */
@@ -655,17 +667,25 @@ body {
 
 .main-navigation {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 .main-navigation li {
 	min-height: 56px;
 	width: 239px;
-	border: 1px dashed black;
+	text-align: center;
 }
 
-.main-navigation li a {
-	border: 1px dashed red;
+.main-navigation li:nth-child(2) {
+	margin-right: auto;
+}
+
+.main-navigation li:nth-child(3) {
+	margin-left: auto;
+}
+
+.main-navigation li {
+	padding-top: 15px;
 }
 
 .header-navigation {
@@ -674,8 +694,9 @@ body {
 
 .main-header-logo {
 	position: absolute;
-	left: 500px;
 	top: 0;
+	left: 50%;
+	margin-left: -69px;
 	z-index: 10;
 }
 
@@ -705,18 +726,16 @@ body {
 .feature-column {
 	width: 400px;
 	min-height: 256px;
-	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
 }
 
 .pictorial-feature .feature-column:first-of-type {
-	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
+	padding-top: 46px;
 }
 
 .pictorial-feature .feature-column:last-of-type {
-	/* здесь можно было бы прописать паддинги для элемента, но работает коряво и почему-то вообще весь соседний блок с фото пропадает */
+	padding-top: 49px;
 }
 
-.feature-column h2,
 .feature-column p {
 	margin-top: 50px;
 }
@@ -725,6 +744,16 @@ body {
 	height: inherit;
 	background-position: center;
 }
+
+ .features-grid-upper .feature-column {
+ 	padding-top: 50px;
+ 	padding-bottom: 50px;
+ }
+
+ .features-grid-lower .feature-column {
+ 	padding-top: 50px;
+ 	padding-bottom: 64px;
+ }
 
 .interested {
 	display: flex;
@@ -737,11 +766,16 @@ body {
 
 /* Модальное окно */
 
+.interested {
+	position: relative;
+}
+
 .modal {
-	width: 458px;
+	width: 568px;
 	padding: 55px;
 	background-color: white;
 	position: absolute;
+	top: 300px;
 	left: 316px;
 }
 
@@ -759,7 +793,7 @@ body {
 }
 
 .form-control-calendar label input {
-	width: 334px;
+	width: 348px;
 	margin-bottom: 30px;
 }
 
@@ -769,19 +803,21 @@ body {
 	background-color: transparent;
 }
 
-.form-control-minus,
-.form-control-plus {
-	position: relative;
-	top: -6px;
+.form-control-quantity {
+	display: flex;
 }
 
 .form-control-quantity label:first-child {
-	margin-right: 34px;
+	margin-right: 38px;
 }
 
 .form-control-quantity label:nth-of-type(2) {
 	margin-left: 52px;
-	margin-right: 19px;
+	margin-right: 29px;
+}
+
+.quantity-enter-block {
+	display: flex;
 }
 
 .to-search {
@@ -815,7 +851,7 @@ body {
 
 .filter-infrastructure-list li,
 .filter-type-list li {
-	margin-top: 23px;
+	margin-top: 18px;
 }
 
 .filter-price {
@@ -830,10 +866,10 @@ body {
 	align-items: center;
 }
 
-.results-sort,
-.hotel-list {
-	padding: 0 72px;
+.results-sort {
+	padding: 0 6%;
 	background-color: #fefefe;
+	border-bottom: 1px solid #e2e2e2;
 }
 
 .results-counter {
@@ -856,10 +892,14 @@ body {
 	margin-left: 12px;
 }
 
+.hotel-list {
+	background-color: #fefefe;
+}
+
 .hotel-card {
-	height: 96px;
 	display: flex;
-	padding: 30px 0;
+	padding: 30px 6%;
+	border-bottom: 1px solid #e2e2e2;
 }
 
 .hotel-info {
@@ -871,16 +911,15 @@ body {
 }
 
 .hotel-rating {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	margin-left: auto;
 }
 
-.hotel-stars {
-	float: right;
-}
-
 .hotel-info h2 {
-	margin: 0;
-	padding: 0;
+	margin-top: -5px;
+	margin-bottom: -7px;
 }
 
 /* Футер */
@@ -901,7 +940,8 @@ body {
 }
 
 .footer-copyright {
-	
+	display: flex;
+	align-items: center;
 }
 
 .index-footer {

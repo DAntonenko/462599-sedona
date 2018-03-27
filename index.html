@@ -99,23 +99,27 @@
 	  			<h2>Заинтересовались?</h2>
 	  			<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 	  			<button class="hotel-search" type="button">Поиск гостиницы в Седоне</button>
+	  		
+		  		<div class="modal">
+		  			<form action="https://echo.htmlacademy.ru" method="post">
+		  				<div class="form-control-calendar">
+		  					<label>Дата заезда:<input type="text" name="arrival-date" value="24 апреля 2017"><button type="button"><span class="visually-hidden">Показать календарь</span></button></label>
+		  					<label>Дата выезда:<input type="text" name="departure-date" value="4 июля 2017"><button type="button"><span class="visually-hidden">Показать календарь</span></button></label>
+		  				</div>
+		  				<div class="form-control-quantity">
+		  					<label>Взрослые:</label>
+		  					<span class="quantity-enter-block">
+			  					<button class="form-control-minus" type="button"><span class="visually-hidden">Уменьшить</span></button><input type="text" name="adults-quantity" min="1" value="2"><button class="form-control-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
+			  				</span>
+		  					<label>Дети:</label>
+		  					<span class="quantity-enter-block">
+		  						<button class="form-control-minus" type="button"><span class="visually-hidden">Уменьшить</span></button><input type="text" name="children-quantity" min="0" value="0"><button class="form-control-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
+		  					</span>
+		  				</div>
+		  				<button class="to-search" type="submit">Найти</button>
+		  			</form>
+		  		</div>
 	  		</section>
-
-	  		<div class="modal">
-	  			<form action="https://echo.htmlacademy.ru" method="post">
-	  				<div class="form-control-calendar">
-	  					<label>Дата заезда:<input type="text" name="arrival-date" value="24 апреля 2017"><button type="button"><span class="visually-hidden">Показать календарь</span></button></label>
-	  					<label>Дата выезда:<input type="text" name="departure-date" value="4 июля 2017"><button type="button"><span class="visually-hidden">Показать календарь</span></button></label>
-	  				</div>
-	  				<div class="form-control-quantity">
-	  					<label>Взрослые:</label>
-	  					<button class="form-control-minus" type="button"><span class="visually-hidden">Уменьшить</span></button><input type="text" name="adults-quantity" min="1" value="2"><button class="form-control-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
-	  					<label>Дети:</label>
-	  					<button class="form-control-minus" type="button"><span class="visually-hidden">Уменьшить</span></button><input type="text" name="children-quantity" min="0" value="0"><button class="form-control-plus" type="button"><span class="visually-hidden">Увеличить</span></button>
-	  				</div>
-	  				<button class="to-search" type="submit">Найти</button>
-	  			</form>
-	  		</div>
 	  		
 	  		<div class="map">
 	  			<img src="img/map.jpg" width="1200" height="593" alt="Карта">
