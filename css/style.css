@@ -551,6 +551,7 @@ body {
 	background-color: #77aecd;
 	text-align: center;
 	padding-top: 4px;
+	margin-right: 2px;
 }
 
 .more-detailed:hover {
@@ -673,6 +674,7 @@ body {
 .main-navigation li {
 	min-height: 56px;
 	width: 239px;
+	padding-top: 14px;
 	text-align: center;
 }
 
@@ -682,10 +684,6 @@ body {
 
 .main-navigation li:nth-child(3) {
 	margin-left: auto;
-}
-
-.main-navigation li {
-	padding-top: 15px;
 }
 
 .header-navigation {
@@ -703,14 +701,14 @@ body {
 /* index main */
 
 .article-header {
-	padding-top: 61px;
-	padding-bottom: 56px;
+	padding-top: 60px;
+  padding-bottom: 39px;
 }
 
 .article-header h2 {
 	width: 440px;
 	margin: auto;
-	margin-bottom: 38px;
+	margin-bottom: 30px;
 }
 
 .index-main-flexbox {
@@ -726,18 +724,6 @@ body {
 .feature-column {
 	width: 400px;
 	min-height: 256px;
-}
-
-.pictorial-feature .feature-column:first-of-type {
-	padding-top: 46px;
-}
-
-.pictorial-feature .feature-column:last-of-type {
-	padding-top: 49px;
-}
-
-.feature-column p {
-	margin-top: 50px;
 }
 
 .picture {
@@ -906,10 +892,6 @@ body {
 	margin-left: 30px;
 }
 
-.more-detailed {
-	margin-right: 6px;
-}
-
 .hotel-rating {
 	display: flex;
 	flex-direction: column;
@@ -951,4 +933,74 @@ body {
 
 .catalog-footer {
 	background-color: #fefefe;
+}
+
+/* Pixel-perfect */
+
+/* header */
+
+.main-navigation li:nth-child(1) a {
+	margin-left: -3px;
+}
+
+.main-navigation li:nth-child(2) a {
+	margin-left: 5px;
+}
+
+.main-navigation li:nth-child(3) a {
+	margin-left: 0px;
+}
+
+.main-navigation li:nth-child(4) a,
+.current-page {
+	margin-left: 15px;
+}
+
+/* index */
+
+.background-container img {
+	margin-top: -4px;
+}
+
+.pictorial-feature .feature-column:first-of-type {
+	padding: 46px 59px 64px 60px;
+}
+
+.pictorial-feature .feature-column:first-of-type h2 {
+	padding: 0 33px;
+	margin-top: 0px;
+}
+
+.pictorial-feature .feature-column:first-of-type p {
+	margin-top: 20px;
+  margin-bottom: -5px;
+}
+
+.features-grid-upper .feature-column {
+	padding: 60px 60px 86px 60px;
+}
+
+.features-grid-upper .feature-column:nth-child(1) .icon {
+
+}
+
+.features-grid-upper .feature-column h2 {
+	margin-bottom: 0px;
+}
+
+.features-grid-upper .feature-column p {
+	margin-top: auto;
+	margin-bottom: 0px;
+}
+
+/* catalog */
+
+.filter-container {
+	padding-top: 31px;
+	padding-bottom: 35px;
+}
+
+.filter-container h3 {
+	margin-top: -4px;
+	margin-right: 115px;
 }
