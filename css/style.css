@@ -350,6 +350,10 @@ body {
 	display: none;
 }
 
+.filter li {
+	position: relative;
+}
+
 .filter-infrastructure-list label::before,
 .filter-type-list label::before {
 	content: "";
@@ -358,6 +362,16 @@ body {
 	height: 23px;
 	background-image: url("../img/checkbox-off.svg");
 	background-repeat: no-repeat;
+	position: absolute;
+	top: -1px;
+}
+
+.filter-infrastructure-list label::before {
+	left: -28px;
+}
+
+.filter-type-list label::before {
+	left: -30px;
 }
 
 .filter-infrastructure-list input[type="checkbox"]:checked ~ label::before,
@@ -375,8 +389,8 @@ body {
 .filter-price-input {
 	position: relative;
 	display: block;
-	width: 314px;
-	height: 32px;
+	width: 318px;
+	height: 36px;
 	border: 2px solid #ffffff;
 	border-radius: 3px;
 	margin-bottom: 22px;
@@ -397,14 +411,14 @@ body {
 
 .filter-price-input label:first-child {
 	margin-left: 65px;
-	margin-right: 90px;
+	margin-right: 93px;
 }
 
 .filter-price-input label:first-child::after {
 	content: "";
 	display: block;
 	position: absolute;
-	top: 3px;
+	top: 5px;
 	left: 157px;
 	width: 2px;
 	height: 22px;
@@ -412,11 +426,12 @@ body {
 }
 
 .filter-price-slider {
-	width: 317px;
+	width: 318px;
   height: 2px;
-  background: linear-gradient(to right, #ffffff 70%, rgba(255, 255, 255, .3) 30%);
+  background: linear-gradient(to right, #ffffff 85%, rgba(255, 255, 255, .3) 25%);
   position: relative;
-  margin-bottom: 34px;
+  margin-top: -2px;
+  margin-bottom: 33px;
 }
 
 .slider-control {
@@ -445,15 +460,16 @@ body {
 }
 
 .slider-control-right {
-	left: 70%;
+	left: 80%;
 }
 
 .filter-price button {
-	width: 133px;
-  height: 32px;
-	border: 2px solid #ffffff;
-	border-radius: 3px;
-	background-color: transparent;
+	width: 137px;
+  height: 34px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-left: 85px;
 }
 
 .filter-price button:hover {
@@ -473,6 +489,7 @@ body {
 .results-sort h3 {
 	font-weight: inherit;
 	font-size: inherit;
+	margin-top: 17px;
 }
 
 .results-counter {
@@ -484,6 +501,10 @@ body {
 .sort-type a {
 	color: rgba(0,0,0,.3);
 	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-type li {
+	margin-top: 5px;
 }
 
 .sort-type li:first-child a {
@@ -582,7 +603,7 @@ body {
 .hotel-stars span {
 	display: inline-block;
 	font-size: 0;
-	margin-left: 5px;
+	margin-left: 2px;
 	width: 18px;
 	height: 17px;
 	background-image: url("../img/star.svg");
@@ -591,9 +612,9 @@ body {
 .hotel-rating-value {
 	color: #666666;
 	background-color: #f2f2f2;
-	padding: 5px 13px 6px 16px;
+	padding: 3px 13px 6px 16px;
 	margin-top: auto;
-	margin-bottom: 0;
+	margin-bottom: 2px;
 }
 
 /* Футер */
@@ -814,35 +835,52 @@ body {
 
 .filter-container {
 	padding-top: 31px;
-	padding-bottom: 23px;
+	padding-bottom: 31px;
 }
 
 .filter {
 	display: flex;
-	justify-content: space-around;
 }
 
 .filter-infrastructure {
 	margin-left: 72px;
+	margin-top: -20px;
 }
 
 .filter-type {
-	margin-left: 115px;
+	margin-left: 121px;
+	margin-top: -20px;
 }
 
 .filter-infrastructure h3,
 .filter-type h3 {
-	margin-bottom: 28px;
+	margin-bottom: 15px;
+}
+
+.filter-type h3 {
+	margin-left: -3px;
 }
 
 .filter-infrastructure-list li,
 .filter-type-list li {
-	margin-top: 18px;
+	margin-top: 25px;
+  margin-left: 28px;
+}
+
+.filter-infrastructure-list label,
+.filter-type-list label {
+	margin-left: 12px;
 }
 
 .filter-price {
-	margin-right: 74px;
+	margin-right: 72px;
 	margin-left: auto;
+	margin-top: -20px;
+}
+
+.filter-price h3 {
+	margin-left: 3px;
+	margin-bottom: 10px;
 }
 
 .results-sort,
@@ -884,7 +922,7 @@ body {
 
 .hotel-card {
 	display: flex;
-	padding: 30px 6%;
+	padding: 30px 6% 24px 6%;
 	border-bottom: 1px solid #e2e2e2;
 }
 
@@ -892,16 +930,30 @@ body {
 	margin-left: 30px;
 }
 
+.hotel-info h2 {
+	margin-top: -5px;
+	margin-bottom: -7px;
+	word-spacing: 1px;
+}
+
+.hotel-info-one span {
+	margin-left: 35px;
+}
+
+.hotel-info-two span {
+	margin-left: 61px;
+}
+
+.hotel-info-three span {
+	margin-left: 18px;
+}
+
 .hotel-rating {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	margin-left: auto;
-}
-
-.hotel-info h2 {
 	margin-top: -5px;
-	margin-bottom: -7px;
 }
 
 /* Футер */
@@ -1051,17 +1103,5 @@ body {
 
 .form-control-quantity label {
 	 margin-top: 5px;
-}
-
-/* catalog */
-
-.filter-container {
-	padding-top: 31px;
-	padding-bottom: 35px;
-}
-
-.filter-container h3 {
-	margin-top: -4px;
-	margin-right: 115px;
 }
 
