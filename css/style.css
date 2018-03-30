@@ -50,7 +50,7 @@ body {
 	width: 1200px;
   margin: 0 auto;
   background: white;
-  box-shadow: 0 0 15px -5px #000000;
+  box-shadow: 0 0 40px -15px #000000;
 }
 
 .container a {
@@ -1033,6 +1033,7 @@ body {
 	margin-left: 15px;
 }
 
+
 /* index */
 
 .background-container img {
@@ -1116,3 +1117,41 @@ body {
 	 margin-top: 5px;
 }
 
+/* Подключение гугл-карты и анимация выезда модального окна для js */
+
+.1article {
+	position: relative;
+	z-index: 10;
+}
+
+.1hotel-search {
+	z-index: 10;
+}
+
+.modal {
+	z-index: 10;
+}
+
+@keyframes modal-slide-up {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-395px); }
+}
+
+.js-modal-close {
+	display: none;
+
+	/*
+	animation-name: modal-slide-up;
+	animation-duration: 2s;
+	*/
+}
+
+.map {
+	position: relative;
+}
+
+.map img {
+	position: absolute;
+	top: -593px;
+	z-index: -10;
+}
