@@ -457,6 +457,7 @@ body {
 	width: 22px;
   height: 22px;
 	border-width: 9px;
+	cursor: pointer;
 }
 
 .slider-control-left {
@@ -547,18 +548,22 @@ body {
 
 .button-arrow-up:hover {
 	background-image: url("../img/arow-up_hover.svg");
+	cursor: pointer;
 }
 
 .button-arrow-down:hover {
 	background-image: url("../img/arrow-down_hover.svg");
+	cursor: pointer;
 }
 
 .button-arrow-up:active {
 	background-image: url("../img/arow-up_active.svg");
+	cursor: pointer;
 }
 
 .button-arrow-down:active {
 	background-image: url("../img/arrow-down_active.svg");
+	cursor: pointer;
 }
 
 /* Блок показа результатов поиска */
@@ -807,14 +812,14 @@ body {
 	margin-bottom: 30px;
 }
 
-.calendar-button-one {
+.modal .calendar-button-one {
 	position: absolute;
 	top: 0px;
 	left: 419px;
 	background-color: transparent;
 }
 
-.calendar-button-two {
+.modal .calendar-button-two {
 	position: absolute;
 	top: 67px;
 	left: 419px;
@@ -1119,17 +1124,22 @@ body {
 
 /* Подключение гугл-карты и анимация выезда модального окна для js */
 
-.1article {
+article {
+	position: relative;
+	z-index: 20;
+}
+
+.interested {
 	position: relative;
 	z-index: 10;
 }
 
-.1hotel-search {
+.hotel-search {
 	z-index: 10;
 }
 
 .modal {
-	z-index: 10;
+	z-index: 5;
 }
 
 @keyframes modal-slide-up {
@@ -1137,13 +1147,26 @@ body {
 	100% { transform: translateY(-395px); }
 }
 
-.js-modal-close {
-	display: none;
+@keyframes modal-slide-down {
+	0% { transform: translateY(-395px); }
+	100% { transform: translateY(0); }
+}
 
-	/*
+
+.js-modal-none {
+	display: none;
+}
+
+.js-modal-close {
+	display: block;
 	animation-name: modal-slide-up;
-	animation-duration: 2s;
-	*/
+	animation-duration: 1s;
+}
+
+.js-modal-open {
+	display: block;
+	animation-name: modal-slide-down;
+	animation-duration: 1s;
 }
 
 .map {

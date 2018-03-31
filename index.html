@@ -152,7 +152,12 @@
 			var modal = document.querySelector(".modal");
 			var form = modal.querySelector("form");
 
-			modal.classList.add("js-modal-close");
+			modal.classList.add("js-modal-none");
+
+			button.addEventListener("click", function (evt) {
+				evt.preventDefault();
+				modal.classList.toggle("js-modal-open");
+			});
 
 			button.addEventListener("click", function (evt) {
 				evt.preventDefault();
@@ -164,11 +169,6 @@
 					evt.preventDefault();
 					modal.classList.add("js-modal-close");
 				}
-			});
-
-			form.addEventListener("submit", function (evt) {
-				evt.preventDefault();
-				console.log("Отправляем форму");
 			});
 		</script>
 
