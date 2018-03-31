@@ -20,15 +20,18 @@
 /* Принудительное наследование box-sizing: border-box для flex-элементов */
 
 html {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 * {
-	box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
 }
 
 .content-box-component {
-	box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
 }
 
 /*******************************/
@@ -50,7 +53,8 @@ body {
 	width: 1200px;
   margin: 0 auto;
   background: white;
-  box-shadow: 0 0 40px -15px #000000;
+  -webkit-box-shadow: 0 0 40px -15px #000000;
+          box-shadow: 0 0 40px -15px #000000;
 }
 
 .container a {
@@ -434,6 +438,9 @@ body {
 .filter-price-slider {
 	width: 318px;
   height: 2px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(85%, #ffffff), color-stop(25%, rgba(255, 255, 255, .3)));
+  background: -webkit-linear-gradient(left, #ffffff 85%, rgba(255, 255, 255, .3) 25%);
+  background: -o-linear-gradient(left, #ffffff 85%, rgba(255, 255, 255, .3) 25%);
   background: linear-gradient(to right, #ffffff 85%, rgba(255, 255, 255, .3) 25%);
   position: relative;
   margin-top: -2px;
@@ -449,7 +456,8 @@ body {
   border-color: #ffffff;
   border-style: solid;
   border-radius: 50%;
-  box-shadow: 0 2px 3px 0 rgba(255, 255, 255, .3);
+  -webkit-box-shadow: 0 2px 3px 0 rgba(255, 255, 255, .3);
+          box-shadow: 0 2px 3px 0 rgba(255, 255, 255, .3);
   position: absolute;
   top: 50%;
   margin-top: -10px;
@@ -699,8 +707,12 @@ body {
 /* Хедер */
 
 .main-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .main-navigation li {
@@ -744,13 +756,19 @@ body {
 }
 
 .index-main-flexbox {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .index-main-flexbox section {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .feature-column {
@@ -774,10 +792,19 @@ body {
  }
 
 .interested {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	height: 291px;
 	padding-top: 25px;
 }
@@ -829,6 +856,8 @@ body {
 }
 
 .form-control-quantity {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -842,6 +871,8 @@ body {
 }
 
 .quantity-enter-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -857,6 +888,8 @@ body {
 }
 
 .filter {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -904,8 +937,12 @@ body {
 .results-sort,
 .sort-type,
 .sort-tuning-arrows {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .results-sort {
@@ -939,6 +976,8 @@ body {
 }
 
 .hotel-card {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 30px 6% 24px 6%;
 	border-bottom: 1px solid #e2e2e2;
@@ -967,9 +1006,16 @@ body {
 }
 
 .hotel-rating {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	margin-left: auto;
 	margin-top: -5px;
 }
@@ -978,12 +1024,18 @@ body {
 
 .main-footer,
 .footer-social {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 .footer-social {
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .main-footer {
@@ -1001,8 +1053,12 @@ body {
 }
 
 .footer-copyright {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-left: 228px;
 }
 
