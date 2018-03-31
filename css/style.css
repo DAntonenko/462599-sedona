@@ -1122,59 +1122,20 @@ body {
 	 margin-top: 5px;
 }
 
-/* Подключение гугл-карты и анимация выезда модального окна для js */
-
-article {
-	position: relative;
-	z-index: 20;
-}
-
-.interested {
-	position: relative;
-	z-index: 10;
-}
-
-.hotel-search {
-	z-index: 10;
-}
+/* Подключение гугл-карты и отключение модального окна для js */
 
 .modal {
-	z-index: 5;
+	z-index: 10;
 }
-
-@keyframes modal-slide-up {
-	0% { transform: translateY(0); }
-	100% { transform: translateY(-395px); }
-}
-
-@keyframes modal-slide-down {
-	0% { transform: translateY(-395px); }
-	100% { transform: translateY(0); }
-}
-
 
 .js-modal-none {
 	display: none;
 }
 
-.js-modal-close {
-	display: block;
-	animation-name: modal-slide-up;
-	animation-duration: 1s;
-}
-
-.js-modal-open {
-	display: block;
-	animation-name: modal-slide-down;
-	animation-duration: 1s;
-}
-
 .map {
 	position: relative;
-}
-
-.map img {
-	position: absolute;
-	top: -593px;
-	z-index: -10;
+  background-image: url(../img/map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 593px;
 }
