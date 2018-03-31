@@ -13,4 +13,5 @@ window.addEventListener("keydown", function (evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault();
 		modal.classList.add("js-modal-none");
-};
+	};
+});
