@@ -411,17 +411,18 @@ body {
 	border: none;
 	color: inherit;
 	margin: 0;
-	width: 30px;
+	width: 40px;
 }
 
 .filter-price-input label {
 	display: inline-block;
+	vertical-align: middle;
 	margin-top: 5px;
 }
 
 .filter-price-input label:first-child {
 	margin-left: 65px;
-	margin-right: 93px;
+	margin-right: 83px;
 }
 
 .filter-price-input label:first-child::after {
@@ -581,6 +582,7 @@ body {
 .more-detailed,
 .to-book {
 	display: inline-block;
+	vertical-align: middle;
 	height: 27px;
 	color: #ffffff;
 	font-weight: 700;
@@ -621,6 +623,7 @@ body {
 
 .hotel-stars span {
 	display: inline-block;
+	vertical-align: middle;
 	font-size: 0;
 	margin-left: 2px;
 	width: 18px;
@@ -688,7 +691,6 @@ body {
 }
 
 .footer-copyright a {
-	display: inline-block;
 	width: 115px;
 	height: 41px;
 	background-image: url("../img/logo_htmlacademy_black.png");
@@ -805,7 +807,7 @@ body {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	height: 291px;
+	min-height: 291px;
 	padding-top: 25px;
 }
 
@@ -861,11 +863,11 @@ body {
 	display: flex;
 }
 
-.form-control-quantity label:first-child {
+.form-label-adults {
 	margin-right: 40px;
 }
 
-.form-control-quantity label:nth-of-type(2) {
+.form-label-children {
 	margin-left: 53px;
   margin-right: 27px;
 }
@@ -1178,8 +1180,9 @@ body {
   margin-bottom: 12px;
 }
 
-.form-control-quantity label {
-	 margin-top: 5px;
+.form-label-adults,
+.form-label-children {
+	margin-top: 5px;
 }
 
 /* Подключение гугл-карты и отключение модального окна для js */
