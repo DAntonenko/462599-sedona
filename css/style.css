@@ -357,7 +357,7 @@ body {
 
 .filter-infrastructure-list input,
 .filter-type-list input {
-	display: none;
+	opacity: 0;
 }
 
 .filter li {
@@ -392,6 +392,11 @@ body {
 	height: 23px;
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
+}
+
+.filter-infrastructure-list input[type="checkbox"]:focus + label::before,
+.filter-type-list input[type="checkbox"]:focus + label::before {
+	outline: rgb(59, 153, 252) auto 5px;
 }
 
 /* Блок ввода цены и слайдера */
@@ -1191,8 +1196,14 @@ body {
 	z-index: 10;
 }
 
-.js-modal-none {
-	display: none;
+.js-modal-close {
+	transform: scaleX(0) scaleY(0);
+	transition: all 0.5s ease;
+}
+
+.js-modal-open {
+	transform: scaleX(1) scaleY(1);
+	transition: all 0.5s ease;
 }
 
 .map {
